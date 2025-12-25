@@ -58,7 +58,7 @@ This is what computers have always done for us – take a pattern of thinking, e
 
 Take the GitHub issues example. Once you've figured out what "good" looks like – proper labels, clear descriptions, linked to milestones – you can encode that thinking:
 
-- Train an agent to suggest relevant labels
+- Use an AI agent to suggest relevant labels
 - Auto-check for duplicates before creating new issues
 - Flag when critical information is missing
 - Add issues to the right project based on keywords
