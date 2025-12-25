@@ -74,5 +74,3 @@ Execution without thinking is just motion. It feels productive but often isn't.
 The work isn't done when you've checked the box. It's done when the thing you created is actually useful to someone – including your future self.
 
 So before you move on to the next task, pause. Ask the question. And when you figure out what "good" looks like, see if you can encode that thinking so you don't have to do it manually every time.
-
-Think deeply once. Apply broadly forever.
