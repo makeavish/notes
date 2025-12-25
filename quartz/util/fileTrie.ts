@@ -5,6 +5,7 @@ interface FileTrieData {
   slug: string
   title: string
   filePath: string
+  date?: Date
 }
 
 export class FileTrieNode<T extends FileTrieData = ContentDetails> {

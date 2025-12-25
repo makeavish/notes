@@ -38,7 +38,21 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        // Folders first, then files
+        if (a.isFolder && !b.isFolder) return -1
+        if (!a.isFolder && b.isFolder) return 1
+        // Both folders: alphabetical
+        if (a.isFolder && b.isFolder) {
+          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+        }
+        // Both files: sort by date (newest first)
+        const dateA = a.data?.date ? new Date(a.data.date).getTime() : 0
+        const dateB = b.data?.date ? new Date(b.data.date).getTime() : 0
+        return dateB - dateA
+      },
+    }),
     Component.RecentNotes({
       title: "Recent Updates",
       limit: 3,
@@ -69,7 +83,21 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        // Folders first, then files
+        if (a.isFolder && !b.isFolder) return -1
+        if (!a.isFolder && b.isFolder) return 1
+        // Both folders: alphabetical
+        if (a.isFolder && b.isFolder) {
+          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+        }
+        // Both files: sort by date (newest first)
+        const dateA = a.data?.date ? new Date(a.data.date).getTime() : 0
+        const dateB = b.data?.date ? new Date(b.data.date).getTime() : 0
+        return dateB - dateA
+      },
+    }),
     Component.RecentNotes({
       title: "Recent Updates",
       limit: 3,

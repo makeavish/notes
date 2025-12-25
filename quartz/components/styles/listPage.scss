@@ -11,7 +11,8 @@ li.section-li {
 
   & > .section {
     display: grid;
-    grid-template-columns: fit-content(8em) 3fr 1fr;
+    grid-template-columns: fit-content(8em) 1fr auto;
+    align-items: baseline;
 
     @media all and ($mobile) {
       & > .tags {
@@ -26,6 +27,16 @@ li.section-li {
     & .meta {
       margin: 0 1em 0 0;
       opacity: 0.6;
+    }
+
+    & > .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3em;
+      justify-content: flex-end;
+      padding: 0;
+      list-style: none;
+      margin: 0;
     }
   }
 }

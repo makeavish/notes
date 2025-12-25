@@ -84,9 +84,19 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   const clone = template.content.cloneNode(true) as DocumentFragment
   const li = clone.querySelector("li") as HTMLLIElement
   const a = li.querySelector("a") as HTMLAnchorElement
+  const titleSpan = a.querySelector(".explorer-title") as HTMLSpanElement
+  const dateSpan = a.querySelector(".explorer-date") as HTMLSpanElement
+  
   a.href = resolveRelative(currentSlug, node.slug)
   a.dataset.for = node.slug
-  a.textContent = node.displayName
+  titleSpan.textContent = node.displayName
+
+  // Format and display date if available
+  if (node.data?.date) {
+    const date = new Date(node.data.date)
+    const formatted = date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+    dateSpan.textContent = formatted
+  }
 
   if (currentSlug === node.slug) {
     a.classList.add("active")

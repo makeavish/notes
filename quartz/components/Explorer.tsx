@@ -124,7 +124,10 @@ export default ((userOpts?: Partial<Options>) => {
         </div>
         <template id="template-file">
           <li>
-            <a href="#"></a>
+            <a href="#">
+              <span class="explorer-title"></span>
+              <span class="explorer-date"></span>
+            </a>
           </li>
         </template>
         <template id="template-folder">

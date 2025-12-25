@@ -124,6 +124,24 @@ button.desktop-explorer {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+
+      .explorer-title {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .explorer-date {
+        font-size: 0.75rem;
+        color: var(--gray);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
 
       &.active {
         opacity: 1;
