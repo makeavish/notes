@@ -2,8 +2,8 @@
 title: Don't Just Execute, Think
 draft: false
 tags:
-  - work
   - productivity
+  - work
 ---
 
 There's a trap I keep falling into. Get task, do task, check off task. Repeat.
