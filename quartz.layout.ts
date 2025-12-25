@@ -39,6 +39,13 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+    Component.RecentNotes({
+      title: "Recent Updates",
+      limit: 3,
+      filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+      linkToMore: false,
+      showTags: false,
+    }),
   ],
   right: [
     Component.Graph(),
@@ -63,6 +70,13 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+    Component.RecentNotes({
+      title: "Recent Updates",
+      limit: 3,
+      filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+      linkToMore: false,
+      showTags: false,
+    }),
   ],
   right: [],
 }

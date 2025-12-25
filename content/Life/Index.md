@@ -1,9 +1,5 @@
 ---
-longform:
-  format: scenes
-  title: Life
-  workflow: Default Workflow
-  sceneFolder: /
-  scenes: []
-  ignoredFiles: []
+title: Life
 ---
+
+Travels, reflections, and the beautiful chaos of everyday life.
