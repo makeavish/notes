@@ -31,11 +31,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Flex({
       components: [
         {
-          Component: Component.Search(),
+          Component: Component.DesktopOnly(Component.Search()),
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        { Component: Component.DesktopOnly(Component.ReaderMode()) },
       ],
     }),
     Component.Explorer({
@@ -53,13 +53,15 @@ export const defaultContentPageLayout: PageLayout = {
         return dateB - dateA
       },
     }),
-    Component.RecentNotes({
-      title: "Recent Updates",
-      limit: 3,
-      filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
-      linkToMore: false,
-      showTags: false,
-    }),
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        title: "Recent Updates",
+        limit: 3,
+        filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+        linkToMore: false,
+        showTags: false,
+      }),
+    ),
   ],
   right: [
     Component.Graph(),
@@ -77,7 +79,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.Flex({
       components: [
         {
-          Component: Component.Search(),
+          Component: Component.DesktopOnly(Component.Search()),
           grow: true,
         },
         { Component: Component.Darkmode() },
@@ -98,13 +100,15 @@ export const defaultListPageLayout: PageLayout = {
         return dateB - dateA
       },
     }),
-    Component.RecentNotes({
-      title: "Recent Updates",
-      limit: 3,
-      filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
-      linkToMore: false,
-      showTags: false,
-    }),
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        title: "Recent Updates",
+        limit: 3,
+        filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+        linkToMore: false,
+        showTags: false,
+      }),
+    ),
   ],
   right: [],
 }

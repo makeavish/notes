@@ -10,6 +10,14 @@ Hey there! 👋 I'm **Vishal Sharma** — a builder at heart who loves creating 
 
 For the past **4+ years**, I've been on an adventure at [SigNoz](https://signoz.io) (YC W21), helping grow it from zero to an open-source observability platform trusted by thousands of teams. I started as the **first backend engineer**, built core systems handling *billions of traces*, and eventually shape-shifted into **Product Manager**. Yeah, I'm that guy who can debug your database *and* debate your roadmap. 😄
 
+### What's this place? 🏡
+
+This is my digital garden — a cozy corner of the internet where I share what I'm learning, building, and thinking about.
+
+1. **[Blog](/blog)** — Deep dives on observability, open source, product building, and lessons from the trenches
+2. **[Life](/life)** — Travels, reflections, and the beautiful chaos of everyday life.
+3. **[Notes](/notes)** — Learnings, unpolished thoughts, and explorations — my playground of ideas
+
 ### Some highlights from the journey 🚀
 
 - **40x** improvement in trace database(clickhouse) performance (yes, forty times!)
@@ -27,14 +35,6 @@ Before SigNoz, I was at **OkCredit** building high-throughput systems (500k+ rpm
 - **Non-fiction books** — I'm a certified **non-fiction nerd** 📚! Check out what I'm reading on [Goodreads](https://www.goodreads.com/makeavish)
 - **Problem-solving** — 1,000+ algorithmic problems solved, ICPC Regionals veteran, Top 100 out of 180,000+ in HackWithInfy (that's top 0.05%!)
 - **Minimalism** — keeping life and code simple
-
-### What's this place? 🏡
-
-This is my digital garden — a cozy corner of the internet where I share what I'm learning, building, and thinking about.
-
-1. **[Blog](/blog)** — Deep dives on observability, open source, product building, and lessons from the trenches
-2. **[Life](/life)** — Travels, reflections, and the beautiful chaos of everyday life.
-3. **[Notes](/notes)** — Learnings, unpolished thoughts, and explorations — my playground of ideas
 
 ---
 

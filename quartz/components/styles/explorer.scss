@@ -141,6 +141,10 @@ button.desktop-explorer {
         color: var(--gray);
         white-space: nowrap;
         flex-shrink: 0;
+
+        @media all and ($mobile) {
+          display: none;
+        }
       }
 
       &.active {
@@ -238,8 +242,8 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       flex: 0 0 34px;
 
       & > .explorer-content {
-        transform: translateX(-100vw);
-        visibility: hidden;
+        transform: translateX(-105vw);
+        visibility: hidden !important;
       }
     }
 
