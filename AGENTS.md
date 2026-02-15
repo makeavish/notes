@@ -21,6 +21,7 @@
     - Use `content/Recommendations/Podcasts/podcast-template.md` for show-level podcast notes
     - Use `content/Recommendations/Podcasts/podcast-episode-template.md` for episode-level notes
     - Episode notes should link to parent podcast notes for graph navigation
+    - Avoid slop/fluff in recommendation metadata and copy (for example, do not use generic tags like `evergreen`)
     - Keep authoring/contribution guidance in docs (`README.md`, `AGENTS.md`), not reader-facing index pages
 - **Quartz core:** `quartz/` — TypeScript SSG engine (Preact components, unified/remark/rehype plugins)
   - `quartz/components/` — Preact page components (Head, Explorer, Graph, Search, etc.)

@@ -6,7 +6,6 @@ tags:
   - podcast
   - product
   - leadership
-  - evergreen
 draft: false
 ---
 
