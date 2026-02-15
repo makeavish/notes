@@ -83,6 +83,7 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         enableRSS: true,
       }),
+      Plugin.AICrawlerFiles(),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.Favicon(),

@@ -1,5 +1,5 @@
 import { i18n } from "../i18n"
-import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
+import { FullSlug, getFileExtension, joinSegments, pathToRoot, simplifySlug } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
@@ -26,15 +26,32 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
+    const is404Page = fileData.slug === "404"
+    const robotsDirectives = is404Page
+      ? "noindex,nofollow"
+      : "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+    const canonicalPath = fileData.slug ? simplifySlug(fileData.slug) : "/"
+    const canonicalUrl =
+      cfg.baseUrl && !is404Page
+        ? `https://${joinSegments(cfg.baseUrl, encodeURI(canonicalPath))}`
+        : undefined
 
     // Url of current page
-    const socialUrl =
-      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+    const socialUrl = canonicalUrl ?? url.toString()
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
       (e) => e.name === CustomOgImagesEmitterName,
     )
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const webSiteJsonLd =
+      cfg.baseUrl &&
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: cfg.pageTitle,
+        url: `https://${cfg.baseUrl}`,
+        inLanguage: cfg.locale,
+      })
 
     return (
       <head>
@@ -61,6 +78,7 @@ export default (() => {
         <meta name="twitter:description" content={description} />
         <meta property="og:description" content={description} />
         <meta property="og:image:alt" content={description} />
+        <meta name="robots" content={robotsDirectives} />
 
         {!usesCustomOgImage && (
           <>
@@ -82,9 +100,13 @@ export default (() => {
           </>
         )}
 
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        {webSiteJsonLd && (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: webSiteJsonLd }} />
+        )}
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
