@@ -8,7 +8,7 @@ Hey there! 👋 I'm **Vishal Sharma** — a builder at heart who loves creating 
 
 ### The TL;DR on Me
 
-For the past **4+ years**, I've been on an adventure at [SigNoz](https://signoz.io) (YC W21), helping grow it from zero to an open-source observability platform trusted by thousands of teams. I started as the **first backend engineer**, built core systems handling *billions of traces*, and eventually shape-shifted into **Product Manager**. Yeah, I'm that guy who can debug your database *and* debate your roadmap. 😄
+For the past **4+ years**, I've been on an adventure at [SigNoz](https://signoz.io) (YC W21), helping grow it from zero to an open-source observability platform trusted by thousands of teams. I started as the **first backend engineer**, built core systems handling _billions of traces_, and eventually shape-shifted into **Product Manager**. Yeah, I'm that guy who can debug your database _and_ debate your roadmap. 😄
 
 ### What's this place? 🏡
 
@@ -17,7 +17,8 @@ This is my digital garden — a cozy corner of the internet where I share what I
 1. **[Blog](/blog)** — Deep dives on observability, open source, product building, and lessons from the trenches
 2. **[Life](/life)** — Travels, reflections, and the beautiful chaos of everyday life.
 3. **[Notes](/notes)** — Learnings, unpolished thoughts, and explorations — my playground of ideas
-4. **[Projects](/Projects)** — Things I'm building — browser extensions, tools, and experiments
+4. **[Recommendations](/Recommendations)** — Podcasts, podcast episodes, blogs, talks, and more across life, product, engineering, and leadership
+5. **[Projects](/Projects)** — Things I'm building — browser extensions, tools, and experiments
 
 ### Some highlights from the journey 🚀
 

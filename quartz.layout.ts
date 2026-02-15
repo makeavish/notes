@@ -45,7 +45,10 @@ export const defaultContentPageLayout: PageLayout = {
         if (!a.isFolder && b.isFolder) return 1
         // Both folders: alphabetical
         if (a.isFolder && b.isFolder) {
-          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
         }
         // Both files: sort by date (newest first)
         const dateA = a.data?.date ? new Date(a.data.date).getTime() : 0
@@ -57,7 +60,8 @@ export const defaultContentPageLayout: PageLayout = {
       Component.RecentNotes({
         title: "Recent Updates",
         limit: 3,
-        filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+        filter: (f) =>
+          !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
         linkToMore: false,
         showTags: false,
       }),
@@ -92,7 +96,10 @@ export const defaultListPageLayout: PageLayout = {
         if (!a.isFolder && b.isFolder) return 1
         // Both folders: alphabetical
         if (a.isFolder && b.isFolder) {
-          return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
         }
         // Both files: sort by date (newest first)
         const dateA = a.data?.date ? new Date(a.data.date).getTime() : 0
@@ -104,11 +111,12 @@ export const defaultListPageLayout: PageLayout = {
       Component.RecentNotes({
         title: "Recent Updates",
         limit: 3,
-        filter: (f) => !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
+        filter: (f) =>
+          !f.slug!.startsWith("tags/") && f.slug! !== "index" && !f.frontmatter?.noindex,
         linkToMore: false,
         showTags: false,
       }),
     ),
   ],
-  right: [],
+  right: [Component.Graph()],
 }
