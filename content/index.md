@@ -17,6 +17,7 @@ This is my digital garden — a cozy corner of the internet where I share what I
 1. **[Blog](/blog)** — Deep dives on observability, open source, product building, and lessons from the trenches
 2. **[Life](/life)** — Travels, reflections, and the beautiful chaos of everyday life.
 3. **[Notes](/notes)** — Learnings, unpolished thoughts, and explorations — my playground of ideas
+4. **[Projects](/Projects)** — Things I'm building — browser extensions, tools, and experiments
 
 ### Some highlights from the journey 🚀
 
