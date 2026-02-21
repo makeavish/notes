@@ -35,5 +35,7 @@ Currently focused on **X/Twitter**. Adapter skeletons for Hacker News, Reddit, a
 ## Links
 
 - **Source**: [github.com/makeavish/FocusDeck](https://github.com/makeavish/FocusDeck)
+- **Install (Firefox)**: [addons.mozilla.org/focusdeck-intentional-feed](https://addons.mozilla.org/en-US/firefox/addon/focusdeck-intentional-feed/)
+- **Install (Chrome)**: [chromewebstore.google.com/focusdeck-intentional-feed](https://chromewebstore.google.com/detail/focusdeck-intentional-fee/pnfjneofemgjgapbomggpgpkedocpibp?hl=en)
 - **Architecture**: [/docs/architecture.md](https://github.com/makeavish/FocusDeck/blob/main/docs/architecture.md)
 - **Privacy policy**: [/docs/privacy-policy.md](https://github.com/makeavish/FocusDeck/blob/main/docs/privacy-policy.md)
