@@ -18,6 +18,5 @@ draft: false
 ## Notes
 
 - Core sutra: *Yogas chitta vritti nirodhah* — Yoga is the stilling of the fluctuations of the mind.
-- Powerful analogy from the commentary: Prisoners and jail guards both spend their days in the same place, yet the prisoners are miserable while the guards are not. The key difference? The guards know they can leave at night. Same circumstances, different state of mind. Suffering is largely a product of perception, not situation.
+- Powerful analogy from the commentary: Prisoners and jail guards both spend their days in the same place, yet the prisoners are miserable while the guards are not. The key difference is that guards think they *work* there — they have a different relationship to the same space. Same circumstances, different state of mind. Suffering is largely a product of perception, not situation.
 - Satchidananda's commentary is grounded and practical — avoids excessive mysticism, focuses on direct experience.
-- Worth reading alongside Swami Vivekananda's *Raja Yoga* for a complementary Vedanta perspective on the same sutras.
